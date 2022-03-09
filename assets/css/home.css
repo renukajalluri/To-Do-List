@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 249, 249);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(204, 180, 86);
+    border: 2px solid;
+}
+.container{
+    width: 360px;
+    height: 320px;
+    background-color:rgb(253, 245, 212); 
+    border-radius: 10px;
+    position: relative;
+    margin: 5% auto;
+   
+}
+.container form{
+    width: 280px;
+    position: absolute;
+    top:70px;
+    left: 40px;
+}
+::placeholder{
+    color: rgb(182, 125, 50);
+}
+form input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 10px 5px;
+    border-bottom: 2px solid rgb(240, 217, 126);
+    margin: 5px 0px;
+    background: transparent;
+    color: rgb(182, 125, 50);
+}
+form label{
+    width:100%;
+    margin: 5px 0px;
+    padding: 10px 5px;
+    color: rgb(167, 106, 36);
+}
+form  #category {
+    border: 0;
+    outline: none;
+    background: rgb(255, 253, 246);
+    margin: 5px 0px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: rgb(167, 106, 36);
+    cursor: pointer;
+}
+
+
+form #add{
+    width: 100%;
+    border: 0;
+    outline: none;
+    margin: 15px 0px;
+    padding: 10px 5px;
+    background:rgb(231, 206, 94);
+    color: white;
+}
+
+form #add:hover{
+    background: whitesmoke;
+    color:rgb(231, 206, 94);
+ }
+.lists{
+    width: 100%;
+    position: relative;
+    margin: 0% auto;
+    margin-top: -3%;
+    align-items: center;
+    box-shadow: inset 5px 5px 12px #ffffff,
+   5px 5px 12px rgba(0,0,0,0.16);;
+}
+
+.doc {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    padding: 3px;
+    background: antiquewhite;
+}
+.fields{
+    padding: 0px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: start;
+   }
+.doc:nth-child(2n+1):hover{
+    border: 2px solid rgb(151, 96, 24);
+    box-shadow: floralwhite;
+}
+.doc:nth-child(2n):hover{
+    border: 2px solid rgb(151, 96, 24);
+}
+#delete{
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    margin-top: 10px;
+    size: 10rem;
+}
+.fa-calendar-xmark{
+    padding-left: 10px;
+    color: rgb(187, 120, 33);
+    margin-right: 20px;
+}
+.fa-list-check{
+    padding-right: 8px;
+    padding-top: 3px;
+}

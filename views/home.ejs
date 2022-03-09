@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <script src="https://kit.fontawesome.com/40ed16fec3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/home.css"> 
+</head>
+<body>
+    <h1 class="heading"><i class="fa-solid fa-list-check fa-md"></i>To Do List App</h1>
+
+    <div class="container">
+        <form action="/create" method="post">
+            <input type="text" name="task" id="" placeholder="Enter Your Task" required autocomplete="off" >
+           <input id="date" type="date" name="date" id=""required autocomplete="off">
+           <label  for="category">Category</label>
+           <select name="category" id="category" >
+                   <option value="personal">Personal</option>
+                   <option value="work">Work</option>
+                   <option value="school">School</option>
+                   <option value="other">Other</option>
+           </select>
+           <button id="add" type="submit">Add Task</button>
+           <!-- <button id="delete" type="submit">Delete Task</button> -->
+        </form>
+    </div>
+    <div class="lists">
+       
+            <% for(let i of  toDo_list){ %>
+                <div class="doc">
+                <a id="delete" href="/delete-todo/?id=<%= i._id %>"><i class="fa-solid fa-calendar-xmark fa-lg"></i></a>
+                <p class="fields task"><b style="padding-right:10px;">Task:</b><%= i.task %></p>
+                <p class="fields date"><b style="padding-right:10px;">Date:</b><%= i.date %></p>
+                <p class="fields category"><b style="padding-right:10px;">Category:</b><%= i.category %></p>
+               
+                </div>
+             <%}%>
+        
+          
+    </div>
+    
+</body>
+</html>
