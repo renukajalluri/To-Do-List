@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 
 //connect to the database
-mongoose.connect('mongodb://0.0.0.0:27017/todo_list_db');
+mongoose.connect(process.env.MONGODB_URI|| 'mongodb://localhost/todo_list_db');
 
 //acquire the connection(to check if it is successfull)
 const db = mongoose.connection;
