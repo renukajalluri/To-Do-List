@@ -80,7 +80,7 @@ app.get('/delete-todo',(req,res)=>{
     })  
 
 
-var port_number = process.env.PORT || 3000;
+var port_number = process.env.PORT;
 app.listen(port_number,()=>{
-    console.log("listening on port 3000");    
+    console.log(`listening on port ${port_number}`);    
 })
