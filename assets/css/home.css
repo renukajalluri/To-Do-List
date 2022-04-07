@@ -164,5 +164,6 @@ form #add:hover{
    }
    .fa-trash-can{
        padding-top: 10px;
+       color: rgb(187, 120, 33);
    }
 }
