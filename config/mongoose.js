@@ -2,16 +2,13 @@
 //require the library
 const mongoose = require("mongoose");
 
-//connect to the database
-mongoose.connect(process.env.MONGODB_URI|| 'mongodb://localhost/todo_list_db');
+const DB = 'mongodb+srv://Signup:123@cluster0.nnrbm.mongodb.net/todolist?retryWrites=true&w=majority'
 
-//acquire the connection(to check if it is successfull)
-const db = mongoose.connection;
 
-// error
-db.on('error',console.error.bind(console,'error connecting to db'))
 
-//up and running then print the message
-db.once("open",function(){
-    console.log("successfully connected");
-})
+mongoose.connect(DB,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+}).then(()=>{
+    console.log('connection successful')
+}).catch((err)=>{console.log('no connection')})
