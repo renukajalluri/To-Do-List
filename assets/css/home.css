@@ -108,7 +108,7 @@ form #add:hover{
     margin-top: 10px;
     size: 10rem;
 }
-.fa-calendar-xmark{
+.fa-trash-can{
     padding-left: 10px;
     color: rgb(187, 120, 33);
     margin-right: 20px;
@@ -116,4 +116,53 @@ form #add:hover{
 .fa-list-check{
     padding-right: 8px;
     padding-top: 3px;
+}
+
+@media screen and (max-width:851px){
+   .heading{
+       width: 300px;
+       margin:20px auto;
+       text-align: center;
+
+   }
+   .container{
+       width: 300px;
+       left: 27px;
+       top:40px;
+       margin-left: 25px;
+    
+   }
+   .container form{
+       left:35px;
+   }
+  
+   form input{
+       /* width: auto; */
+       width: 79%;
+   }
+   form label{
+       width: auto;
+       padding-top: 20px;
+       /* color: white; */
+   }
+   form #add{
+       width: 80%;
+       padding: auto;
+   }
+   .lists{
+       width: 90%;
+       top:70px;
+       margin-left: -2px;
+       margin-right: 5px;
+       left: 20px;
+       text-align: center;
+       /* padding-left:-10px ; */
+   }
+   .doc{
+        /* padding-left: -10px; */
+        font-size: 20px;
+   }
+   .fa-trash-can{
+       padding-top: 10px;
+   }
 }
